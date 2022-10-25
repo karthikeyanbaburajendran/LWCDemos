@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/karthikeyanbaburajendran.lwc-l9o9bpmt-fork-l9o9kzlr",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve PGEL9e4tAxwxjTLKWJ11 --open"
+  }
+}
