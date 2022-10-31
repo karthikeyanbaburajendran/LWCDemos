@@ -3,5 +3,13 @@
 		<div class="slds-p-around_medium">
 			<h1> My name is {fullname}</h1>
 		</div>
+		<div class="slds-p-left_small">
+			<lightning-input type="text" name="title" label="Enter your fullname" value={title} onchange={handlechange}>
+			</lightning-input>
+		</div>
+		<div>
+			<lightning-button variant="brand-outline" label="Submit" title="Submit" onclick={handleClick}
+				class="slds-m-left_x-small"></lightning-button>
+		</div>
 	</lightning-card>
 </template>
