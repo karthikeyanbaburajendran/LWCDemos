@@ -1,27 +1,30 @@
 import { LightningElement } from "lwc";
-
-export default class App extends LightningElement {
-  title = "Welcome to Lightning WWW Compone!";
-
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+export default class TemplateLoopingForEach extends LightningElement {
+  carList = ["Ford", "Audi", "Maruti", "Hyundai", "Mercedes"];
+  programmingList = [
+    {
+      id: "06868",
+      language: "HTML"
+    },
+    {
+      id: "19797",
+      language: "CSS"
+    },
+    {
+      id: "298789",
+      language: "Javascript"
+    },
+    {
+      id: "398798",
+      language: "Apex"
+    },
+    {
+      id: "48967",
+      language: "Aura"
+    },
+    {
+      id: "58798",
+      language: "Java"
+    }
+  ];
 }
