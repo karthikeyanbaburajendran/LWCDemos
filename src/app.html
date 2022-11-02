@@ -1,7 +1,23 @@
+<!--single array looping [carList] is the array in js-->
 <template>
-	<lightning-card title="This is my first LWC COmponent" icon-name="custom:custom1">
-		<div class="slds-p-around_medium">
-			<h1> My name is {fullname}</h1>
-		</div>
+	<!-- Card for for:each demo with an array -->
+	<lightning-card title="for:each demo with array" icon-name="custom:custom14">
+		<ul class="slds-m-around_medium">
+			<template for:each={carList} for:item="car">
+				<a href="#" class="list-group-item list-group-item-action" key={car}>{car}</a>
+			</template>
+		</ul>
+	</lightning-card>
+
+	<!-- array of objects looping [programmingList] is the array object here in js-->
+
+	<lightning-card title="for:each demo with Array of objects " icon-name="custom:custom5">
+		<ul class="slds-m-around_small">
+			<div class="slds-m-around_medium">
+				<template for:each={programmingList} for:item="program">
+					<p class="slds-p-around_large" key={program.id}>{program.language}</p>
+				</template>
+			</div>
+		</ul>
 	</lightning-card>
 </template>
