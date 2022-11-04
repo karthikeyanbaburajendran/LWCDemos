@@ -1,27 +1,30 @@
 import { LightningElement } from "lwc";
-
-export default class App extends LightningElement {
-  title = "Welcome to Lightning WWW Compone!";
-
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+export default class templateLoopingArray extends LightningElement {
+  ceoList = [
+    {
+      id: 1,
+      company: "Google",
+      name: "Sundar Pichai"
+    },
+    {
+      id: 2,
+      company: "Apple Inc.",
+      name: "Tim cook"
+    },
+    {
+      id: 3,
+      company: "Facebook",
+      name: "Mark Zuckerberg"
+    },
+    {
+      id: 4,
+      company: "Amazon.com",
+      name: "Jeff Bezos"
+    },
+    {
+      id: 5,
+      company: "Capgemini",
+      name: "Paul Hermelin"
+    }
+  ];
 }
