@@ -1,30 +1,30 @@
 import { LightningElement } from "lwc";
-export default class TemplateLoopingForEach extends LightningElement {
-  carList = ["Ford", "Audi", "Maruti", "Hyundai", "Mercedes"];
-  programmingList = [
+export default class templateLoopingArray extends LightningElement {
+  ceoList = [
     {
-      id: "06868",
-      language: "HTML"
+      id: 1,
+      company: "Google",
+      name: "Sundar Pichai"
     },
     {
-      id: "19797",
-      language: "CSS"
+      id: 2,
+      company: "Apple Inc.",
+      name: "Tim cook"
     },
     {
-      id: "298789",
-      language: "Javascript"
+      id: 3,
+      company: "Facebook",
+      name: "Mark Zuckerberg"
     },
     {
-      id: "398798",
-      language: "Apex"
+      id: 4,
+      company: "Amazon.com",
+      name: "Jeff Bezos"
     },
     {
-      id: "48967",
-      language: "Aura"
-    },
-    {
-      id: "58798",
-      language: "Java"
+      id: 5,
+      company: "Capgemini",
+      name: "Paul Hermelin"
     }
   ];
 }
