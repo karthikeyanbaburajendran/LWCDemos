@@ -1,7 +1,16 @@
 <template>
-	<lightning-card title="This is my first LWC COmponent" icon-name="custom:custom1">
+	<lightning-card title="if:true Demo" icon-name="custom:custom17">
 		<div class="slds-p-around_medium">
-			<h1> My name is {fullname}</h1>
+			<lightning-button variant="destructive-text" label="Show/Hide Details" onclick={handleClick}
+				class="slds-m-left_x-small">
+			</lightning-button>
+			<div class="slds-p-around_small">
+				<template if:true={ShowText}><strong>{fullname}</strong>
+					<div>
+						{details}
+					</div>
+				</template>
+			</div>
 		</div>
 	</lightning-card>
 </template>
