@@ -1,16 +1,11 @@
 <template>
-	<lightning-card title="if:true Demo" icon-name="custom:custom17">
-		<div class="slds-p-around_medium">
-			<lightning-button variant="destructive-text" label="Show/Hide Details" onclick={handleClick}
-				class="slds-m-left_x-small">
+	<lightning-card title="if:false Demo" icon-name="custom:custom21">
+		<div class="slds-m-around_medium">
+			<lightning-button label="Hide Text" variant="success" title="Hide Text" onclick={hideHandler}>
 			</lightning-button>
-			<div class="slds-p-around_small">
-				<template if:true={ShowText}><strong>{fullname}</strong>
-					<div>
-						{details}
-					</div>
-				</template>
-			</div>
+		</div>
+		<div>
+			<template if:false={hideText}>Hurray !! you have hided the text</template>
 		</div>
 	</lightning-card>
 </template>
