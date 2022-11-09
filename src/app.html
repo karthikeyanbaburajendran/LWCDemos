@@ -1,16 +1,19 @@
 <template>
-	<lightning-card title="if:true Demo" icon-name="custom:custom17">
-		<div class="slds-p-around_medium">
-			<lightning-button variant="destructive-text" label="Show/Hide Details" onclick={handleClick}
-				class="slds-m-left_x-small">
+	<lightning-card title="Usage of getter class in javascript to evaluate expression" icon-name="custom:custom18">
+		<div class="slds-m-around_medium">
+			<h1 class="slds-text-heading_large">{getTitle}</h1>
+		</div>
+		<div class=slds-m-around_large>
+			<lightning-button variant="success" label="ON" value="ON" class="slds-m-around_medium" onclick={selectButton}>
 			</lightning-button>
-			<div class="slds-p-around_small">
-				<template if:true={ShowText}><strong>{fullname}</strong>
-					<div>
-						{details}
-					</div>
-				</template>
+			<lightning-button variant="destructive" label="OFF" value="OFF" onclick={selectButton}>
+			</lightning-button>
+		</div>
+		<div class="slds-m-around_large">
+			<div class={boxStatus}>
+				<p class="slds-p-around_large"><strong>{sldbutton}</strong></p>
 			</div>
+
 		</div>
 	</lightning-card>
 </template>
