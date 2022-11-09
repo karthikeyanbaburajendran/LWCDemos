@@ -15,11 +15,11 @@ handleClick(){
 get getTitle(){
   return this.title.toUpperCase();
 }
+selectButton(event){
+console.log(event.target.value)
+this.sldbutton=event.target.value;
+}
 get boxStatus(){
   return `box ${this.sldbutton === 'ON' ? 'green':'red'}`
-}
-selectButton(event){
-//console.log(event.currentTarget.innerText)
-this.sldbutton=event.currentTarget.innerText;
 }
 }
