@@ -1,27 +1,25 @@
 import { LightningElement } from "lwc";
 
 export default class App extends LightningElement {
-  title = "Welcome to Lightning WWW Compone!";
+fullname;
+details
+ShowText=false
+title="This is a getter class";
+sldbutton="OFF";
 
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+handleClick(){
+  this.ShowText=!this.ShowText
+  this.fullname="Name : karthikeyan"
+  this.details="Designation: Software Engineer"
+}
+get getTitle(){
+  return this.title.toUpperCase();
+}
+get boxStatus(){
+  return `box ${this.sldbutton === 'ON' ? 'green':'red'}`
+}
+selectButton(event){
+//console.log(event.currentTarget.innerText)
+this.sldbutton=event.currentTarget.innerText;
+}
 }

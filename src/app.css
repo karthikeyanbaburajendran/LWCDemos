@@ -1,12 +1,21 @@
-h1 {
-    color: rgb(0, 112, 210);
+button {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  background-color: #e7e7e7;
+   color: black;
+  border:1px solid black;
 }
-p {
-    font-family: 'Salesforce Sans', Arial, sans-serif;
-    color: rgb(62, 62, 60);
+.green{
+    background:green;
 }
-.app {
-    background-color: #fafaf9;
-    height: 100vh;
-    overflow: scroll;
+.red{
+    background:red;
+}
+
+.box{
+    height:100px;
+    width:100px;
+    border:1px solid black;
 }
