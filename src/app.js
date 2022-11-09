@@ -1,27 +1,16 @@
 import { LightningElement } from "lwc";
 
 export default class App extends LightningElement {
-  title = "Welcome to Lightning WWW Compone!";
 
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+name
+fullname
+storetheName(event){
+this.name=event.target.value
+}
+get showText(){
+  return this.fullname==="Karthikeyan"?true:false
+}
+onSubmit(event){
+  this.fullname=this.name
+}
 }
