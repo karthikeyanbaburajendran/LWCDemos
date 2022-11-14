@@ -1,27 +1,19 @@
-import { LightningElement } from "lwc";
+import { LightningElement } from 'lwc';
+import signinTemplate from './signinTemplate.html'
+import signupTemplate from './signupTemplate.html'
+import defaultTemplate from './app.html'
+export default class RenderMultipleDemo extends LightningElement {
 
-export default class App extends LightningElement {
-  title = "Welcome to Lightning WWW Compone!";
+selectedTemplate
 
-  showFeatures = true;
+render(){
+  return this.selectedTemplate==="Sign In"?signinTemplate:this.selectedTemplate==="Sign Up"?
+  
+  signupTemplate:defaultTemplate
 
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+}
+
+handleClick(event){
+  this.selectedTemplate=event.target.value
+}
 }
