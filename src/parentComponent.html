@@ -3,14 +3,8 @@
 		<div class=slds-m-around_medium>
 			<p><strong>Hi This is parent Component</strong></p>
 			<br>
-			<template if:true={buttonLabel}>
-				<lightning-button variant="success" value="true" label="Show Child Component" onclick={handleClick}>
-				</lightning-button>
-			</template>
-			<template if:false={buttonLabel}>
-				<lightning-button variant="destructive" value="true" label="Hide Child Component" onclick={handleClick}>
-				</lightning-button>
-			</template>
+			<lightning-button variant={buttonVariant} value={buttonValue} label={buttonLabel} onclick={handleClick}>
+			</lightning-button>
 		</div>
 		<template if:true={boo}>
 			<div class=slds-m-around_medium>
