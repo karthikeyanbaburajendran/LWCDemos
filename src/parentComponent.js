@@ -5,12 +5,12 @@ export default class MethodCaller extends LightningElement {
     video = "https://www.w3schools.com/tags/movie.mp4";
 
     handlePlay() {
-        this.template.querySelector('c-child-component').play();
+        this.template.querySelector('c-child-component').play();//We call methods in child class here
         this.buttonAction=!this.buttonAction
     }
 
     handlePause() {
-        this.template.querySelector('c-child-component').pause();
+        this.template.querySelector('c-child-component').pause();//We call methods in child class here
         this.buttonAction=!this.buttonAction
     }
 }
