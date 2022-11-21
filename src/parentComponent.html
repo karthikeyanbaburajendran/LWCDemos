@@ -1,17 +1,11 @@
 <template>
-	<lightning-card title="Parent to Child Communication" icon-name="custom:custom15">
-		<div class=slds-m-around_medium>
-			<p><strong>Hi This is parent Component</strong></p>
-			<br>
-			<lightning-button variant={buttonVariant} value={buttonValue} label={buttonLabel} onclick={handleClick}>
-			</lightning-button>
-		</div>
-		<template if:true={boo}>
-			<div class=slds-m-around_medium>
-				<c-child-component
-					msg="This is a call(message) from parent component which is catched in child using @api decorator">
-				</c-child-component>
-			</div>
+	<div>
+		<template if:true={buttonAction}>
+			<lightning-button variant="success" label="Play" value={buttonAction} onclick={handlePlay}></lightning-button>
 		</template>
-	</lightning-card>
+		<template if:false={buttonAction}>
+			<lightning-button variant="destructive" label="Pause" onclick={handlePause}></lightning-button>
+		</template>
+		<c-child-component video-url={video}></c-child-component>
+	</div>
 </template>
