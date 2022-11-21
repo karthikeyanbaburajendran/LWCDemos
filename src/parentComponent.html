@@ -1,11 +1,7 @@
 <template>
-	<div>
-		<template if:true={buttonAction}>
-			<lightning-button variant="success" label="Play" value={buttonAction} onclick={handlePlay}></lightning-button>
-		</template>
-		<template if:false={buttonAction}>
-			<lightning-button variant="destructive" label="Pause" onclick={handlePause}></lightning-button>
-		</template>
-		<c-child-component video-url={video}></c-child-component>
-	</div>
+	<lightning-card title="Parent to child communication Using Arrays" icon-name="custom:custom17">
+		<div class="slds-m-around_medium">
+			<c-child-component user-details={userDetails}></c-child-component>
+		</div>
+	</lightning-card>
 </template>
