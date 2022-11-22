@@ -1,15 +1,5 @@
 <template>
-  <template for:each={userDetails} for:item="iter">
-    <div class="card" key={iter.name}>
-      <img src={iter.imageUrl} alt={iter.name} style="width:100%">
-      <h1>{iter.name}</h1>
-      <p class="title">{iter.title}</p>
-      <p>{iter.company}</p>
-      <p><button onclick={handleClick}>{iter.buttontext} </button></p>
-      <template if:true={phoneNumber}>
-        <strong>Phone: {iter.phoneNumber}</strong>
-      </template>
-    </div>
-  </template>
-
+  <div class="myProgress">
+    <div class="myBar" style={getStyle}>{percentage}</div>
+  </div>
 </template>

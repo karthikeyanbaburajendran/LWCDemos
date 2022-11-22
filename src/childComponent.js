@@ -1,10 +1,9 @@
 import { LightningElement, api } from 'lwc';
 
 export default class VideoPlayer extends LightningElement {
-@api userDetails
-phoneNumber=false
+@api percentage
 
-handleClick(){
-this.phoneNumber=!this.phoneNumber
+get getStyle(){
+  return 'width:' + this.percentage + '%'
 }
 }
