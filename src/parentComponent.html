@@ -1,0 +1,8 @@
+<template>
+	<lightning-card title="Parent to child communication Using Events" icon-name="custom:custom17">
+		<div class="slds-m-around_medium">
+			<input type="number" value={percentage} onchange={handleChange}></input>
+			<c-child-component percentage={percentage}></c-child-component>
+		</div>
+	</lightning-card>
+</template>
