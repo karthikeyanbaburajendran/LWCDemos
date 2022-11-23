@@ -1,12 +1,16 @@
-h1 {
-    color: rgb(0, 112, 210);
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  background: #2196f3;
 }
-p {
-    font-family: 'Salesforce Sans', Arial, sans-serif;
-    color: rgb(62, 62, 60);
+.parent-wrapper{
+    padding: 10px;
+    border: 5px solid #00a1e0;
 }
-.app {
-    background-color: #fafaf9;
-    height: 100vh;
-    overflow: scroll;
+.child-wrapper{
+    padding: 10px;
+    border: 2px solid #3cc2b3;
+    margin: 10px;
 }

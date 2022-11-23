@@ -1,34 +1,21 @@
 import { LightningElement, api } from 'lwc';
 
 export default class VideoPlayer extends LightningElement {
-    @api videoUrl;
+    @api barcolor
+    @api bool
+    colorName="green"
 
-    @api
-    get isPlaying() {
-        const player = this.template.querySelector('video');
-        return player !== null && player.paused === false;
-    }
 
-    @api
-    play() {
-        const player = this.template.querySelector('video');
-        // the player might not be in the DOM just yet
-        if (player) {
-            player.play();
+    @api getColor(){
+        if(this.bool==true){
+        this.colorName="red"
+        this.barcolor="redBar"
         }
-    }
-
-    @api
-    pause() {
-        const player = this.template.querySelector('video');
-        if (player) {
-            // the player might not be in the DOM just yet
-            player.pause();
+        else{
+            this.colorName="green"
+            this.barcolor="greenBar"
         }
-    }
-
-    // private getter for computed value
-    get videoType() {
-        return 'video/' + this.videoUrl.split('.').pop();
     }
 }
+
+    
