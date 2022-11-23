@@ -1,0 +1,10 @@
+<template>
+	<lightning-card title="Child To Parent Communication Using Methods" icon-name="custom:custom60">
+		<div class="parent-wrapper">
+			<lightning-button class="btn" label="Click to Change Color" onclick={handleClick}></lightning-button>
+		</div>
+		<div class="child-wrapper">
+			<c-child-component barcolor={barcolor} bool={bool}></c-child-component>
+		</div>
+	</lightning-card>
+</template>
