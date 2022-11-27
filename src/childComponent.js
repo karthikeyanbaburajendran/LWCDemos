@@ -1,21 +1,14 @@
 import { LightningElement, api } from 'lwc';
 
 export default class VideoPlayer extends LightningElement {
-    @api barcolor
-    @api bool
+    @api headerText
+    @api contentText
     colorName="green"
 
 
-    @api getColor(){
-        if(this.bool==true){
-        this.colorName="red"
-        this.barcolor="redBar"
-        }
-        else{
-            this.colorName="green"
-            this.barcolor="greenBar"
-        }
-    }
+closeHandler(){
+    this.dispatchEvent(new CustomEvent('close'))
+}
 }
 
     

@@ -1,11 +1,14 @@
 import { LightningElement } from 'lwc';
 
 export default class MethodCaller extends LightningElement {
-   barcolor = "greenBar"
-   bool=true
+showModal=false
+headerText="Model Class"
+contentText="Hi This is triggered from Parent Component to Child Component and close Event triggered from child to Parent and handled here"
 handleClick(){
-    this.template.querySelector('c-child-component').getColor()
-this.bool=!this.bool
-    console.log(this.bool)
+    this.showModal=true
+
+}
+modalCloseHandler(){
+    this.showModal=false
 }
 }

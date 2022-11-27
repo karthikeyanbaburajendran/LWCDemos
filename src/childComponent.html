@@ -1,5 +1,10 @@
 <template>
-  <div class={barcolor}>
-    {colorName}
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <header><strong>{headerText}</strong> </header>
+      <p>{contentText}</p>
+      <footer>{footerText}</footer>
+      <lightning-button variant="destructive" label="Close" value="close" onclick={closeHandler}></lightning-button>
+    </div>
   </div>
 </template>
