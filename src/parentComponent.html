@@ -1,0 +1,11 @@
+<template>
+	<lightning-card title="Child To Parent Communication Using Events without Data" icon-name="custom:custom60">
+		<lightning-button title="Open Child Modal" value="Model" label="Open Child Modal" variant="success"
+			onclick={handleClick}>
+		</lightning-button>
+		<template if:true={showModal}>
+			<c-child-component header-text={headerText} content-text={contentText} onclose={modalCloseHandler}>
+			</c-child-component>
+		</template>
+	</lightning-card>
+</template>
