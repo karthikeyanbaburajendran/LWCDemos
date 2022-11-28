@@ -1,0 +1,20 @@
+<template>
+	<lightning-card title="Child To Parent Communication Using Events with Data" icon-name="custom:custom60">
+		<div>
+			<c-child-component nav-list={navList} onselection={parentHandler}></c-child-component>
+			<template if:true={selectedPlayer}>
+				<div class="card">
+					<div>
+						<img src={selectedPlayer.imgUrl} alt="Avatar" style="width:100%" />
+					</div>
+					<div class="container">
+						<p><strong>Player Name:</strong> {selectedPlayer.name}</p>
+						<p><strong>Ranking:</strong> {selectedPlayer.position}</p>
+						<p><strong>country:</strong> {selectedPlayer.country}</p>
+						<p><strong>Rating:</strong> {selectedPlayer.rating}</p>
+					</div>
+				</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>
