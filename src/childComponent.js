@@ -1,13 +1,13 @@
 import { LightningElement, api } from 'lwc';
 
 export default class VideoPlayer extends LightningElement {
-    @api headerText
-    @api contentText
-    colorName="green"
+@api navList
 
+handlerNavSelection(event){
+const playerName=new CustomEvent('selection',{detail:event.target.name
 
-closeHandler(){
-    this.dispatchEvent(new CustomEvent('close'))
+})
+this.dispatchEvent(playerName)
 }
 }
 

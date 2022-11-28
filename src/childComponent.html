@@ -1,10 +1,9 @@
 <template>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <header><strong>{headerText}</strong> </header>
-      <p>{contentText}</p>
-      <footer>{footerText}</footer>
-      <lightning-button variant="destructive" label="Close" value="close" onclick={closeHandler}></lightning-button>
-    </div>
+  <p>I am Child Component</p>
+  <div class="vertical-menu">
+    <template for:each={navList} for:item="list">
+      <a href="javascript:void(0);" class={list.className} name={list.name} key={list.id}
+        onclick={handlerNavSelection}>{list.name}</a>
+    </template>
   </div>
 </template>
