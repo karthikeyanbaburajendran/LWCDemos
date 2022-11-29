@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Child to Parent Via Event Bubbling" icon-name="custom:custom17">
+    <template if:true={showDetailsofParent}>
+      <span>This event has bubbled up till Child only and not propaged to Parent </span>
+    </template>
+    <div class="slds-m-around_small" onclick={showHandler}>
+      <lightning-button variant="success" label="Click me to show event bubbling from parent to child"
+        onclick={notifyParentEvent}>
+      </lightning-button>
+
+    </div>
+  </lightning-card>
+</template>
