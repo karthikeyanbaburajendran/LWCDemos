@@ -1,15 +1,13 @@
 <template>
-  <template for:each={userDetails} for:item="iter">
-    <div class="card" key={iter.name}>
-      <img src={iter.imageUrl} alt={iter.name} style="width:100%">
-      <h1>{iter.name}</h1>
-      <p class="title">{iter.title}</p>
-      <p>{iter.company}</p>
-      <p><button onclick={handleClick}>{iter.buttontext} </button></p>
-      <template if:true={phoneNumber}>
-        <strong>Phone: {iter.phoneNumber}</strong>
-      </template>
-    </div>
-  </template>
+  <lightning-card title="Child to Parent Via Event Bubbling" icon-name="custom:custom17">
+    <template if:true={showDetailsofParent}>
+      <span>This event has bubbled up till Child only and not propaged to Parent </span>
+    </template>
+    <div class="slds-m-around_small" onclick={showHandler}>
+      <lightning-button variant="success" label="Click me to show event bubbling from parent to child"
+        onclick={notifyParentEvent}>
+      </lightning-button>
 
+    </div>
+  </lightning-card>
 </template>

@@ -1,7 +1,18 @@
 <template>
-	<lightning-card title="Parent to child communication Using Arrays" icon-name="custom:custom17">
+	<lightning-card title="Event with Bubbling" icon-name="custom:custom14">
 		<div class="slds-m-around_medium">
-			<c-child-component user-details={userDetails}></c-child-component>
+			<div class="parent-section" onshow={showHandler}>
+				<p>I am parent component</p>
+				<template if:true={showNotification}>
+					<div class="notificationbox">
+						<span>Notification from child. Event bubbled successfully</span>
+					</div>
+				</template>
+				<c-child-component></c-child-component>
+			</div>
+
+
+
 		</div>
 	</lightning-card>
 </template>
