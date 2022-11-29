@@ -1,7 +1,8 @@
 import { LightningElement,api } from 'lwc';
 
 export default class AlertParentComponent extends LightningElement {
-
+selecteceo= null
+bool=false
  userDetails=[{
             name: 'John Doe',
             title: 'CEO & Founder',
@@ -35,5 +36,12 @@ export default class AlertParentComponent extends LightningElement {
             phoneNumber:"865745643543"
         }
 ]
-trio="ssaufus"
+handleEventFromChild(event){
+    const ceoName=event.detail
+    this.selecteceo = this.userDetails.find(item=>item.name === ceoName)
+    if(this.selecteceo){
+        this.bool=!this.bool
+    }
+console.log(this.selecteceo)
+}
 }

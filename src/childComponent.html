@@ -5,10 +5,7 @@
       <h1>{iter.name}</h1>
       <p class="title">{iter.title}</p>
       <p>{iter.company}</p>
-      <p><button onclick={handleClick}>{iter.buttontext} </button></p>
-      <template if:true={phoneNumber}>
-        <strong>Phone: {iter.phoneNumber}</strong>
-      </template>
+      <a href="javascript:void(0);" value={iter.company} onclick={handleClick} name={iter.name}>{iter.buttontext} </a>
     </div>
   </template>
 

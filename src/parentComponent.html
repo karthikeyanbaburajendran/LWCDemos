@@ -1,7 +1,12 @@
 <template>
 	<lightning-card title="Parent to child communication Using Arrays" icon-name="custom:custom17">
-		<div class="slds-m-around_medium">
-			<c-child-component user-details={userDetails}></c-child-component>
+		<div class="flex">
+			<c-child-component user-details={userDetails} onselection={handleEventFromChild}></c-child-component>
 		</div>
+		<template if:true={selecteceo}>
+			<div class="container">
+				<p><strong> PhoneNumber:</strong> {selecteceo.phoneNumber}</p>
+			</div>
+		</template>
 	</lightning-card>
 </template>
